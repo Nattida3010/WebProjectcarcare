@@ -33,12 +33,14 @@
 			background: #c0392b ;
 			padding: 10px;
 			text-align: center;
+			
 		}
 		.brand_logo {
 			height: 150px;
 			width: 150px;
 			border-radius: 50%;
 			border: 2px solid yellow;
+		
 		}
 		.form_container {
 			margin-top: 100px;
@@ -83,3 +85,4 @@
 			border-radius: 5px;
 
 		}
+		
