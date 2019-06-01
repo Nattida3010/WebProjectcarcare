@@ -18,10 +18,7 @@
 			justify-content: center;
 			flex-direction: column;
 			padding: 10px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+			
 
 		}
 		.brand_logo_container {
@@ -42,12 +39,24 @@
 			border: 2px solid yellow;
 		
 		}
+		.home_logo{
+			height: 90px;
+			width: 90px;
+			border-radius: 50%;
+			border: 2px solid yellow;
+
+		}
 		.form_container {
 			margin-top: 100px;
 		}
 		.login_btn {
 			width: 100%;
 			background: #c0392b ;
+			color: white ;
+		}
+		.turnback_btn{
+			width: 50%;
+			background: green;
 			color: white ;
 		}
 		.login_btn:focus {
