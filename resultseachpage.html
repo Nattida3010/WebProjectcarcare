@@ -21,8 +21,7 @@
 
     <form class="form-inline my-3 my-lg-5">
       <input class="form-control mr-sm-3" type="text" placeholder="กรุณากรอกหมายเลขทะเบียนรถ" size="60">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="button" name= "button"
-      OnClick="seach();" >ค้นหา</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >ค้นหา</button>
     </form>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +38,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <li class="nav-item active">
             &nbsp; <i class='fas fa-file-alt' style='font-size:50px;color:#f39c12'></i>
-          <a class="nav-link" href="reportpage.html">รายงาน
+          <a class="nav-link" href="Homepage.html">รายงาน
             <span class="sr-only">(current)</span>
           </a>
         </li>
@@ -57,7 +56,7 @@
   </nav>
   <div class="head">
     <center>
-      <h2>รายการให้บริการของรถในวันที่ </h2>
+      <h2>ผลการค้นหาจากหมายเลขทะเบียนรถ </h2>
     </center>
  
     <div class="container">
@@ -83,12 +82,13 @@
   </div>
 </div>
 <script language="javascript">
-  function seach(){     
-      console.log("true");
-    window.location.href = ("resultseachpage.html" );
-
-  }
-  </script>
+    function seach(){     
+        console.log("true");
+      window.location.href = ("resultseachpage.html" );
+  
+    }
+    </script>
+  
 </body>
 
 </html>
