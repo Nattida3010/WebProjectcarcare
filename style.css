@@ -127,6 +127,7 @@
 		}
 		.navbar{
 			height: 15%;
+			width: auto;
 		}
 		h2{
 		
@@ -171,4 +172,12 @@ height: 50%;
 }
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+.form-control{
+	width: 55%;
+	height: auto;
+}
+.dropdown-toggle{
+	margin-top: 10px;
+	background-color:  #c0392b;
 }
