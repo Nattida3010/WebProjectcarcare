@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home Page</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+    integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-danger navbar-danger ">
+    <a class="navbar-brand" href="#">
+      <img src="pic/logo.gif" class="home_logo" alt="Logo">
+    </a>
+
+    
+      <input class="form-control mr-sm-3" type="text" placeholder="กรุณากรอกหมายเลขทะเบียนรถ" size="30">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" name= "button"
+      OnClick="seach();" >ค้นหา</button>
+    
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+            <i class='fas fa-home' style='font-size:37px;color:#f39c12'></i>
+          <a class="nav-link" href="Homepage.html">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item active">
+            &nbsp; <i class='fas fa-file-alt' style='font-size:37px;color:#f39c12'></i>
+          <a class="nav-link" href="reportpage.html">รายงาน
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item active">
+            &nbsp;<i class="fas fa-bullhorn"style='font-size:37px; color:#f39c12'></i>
+          <a class="nav-link" href="chatpage.html">ประกาศ
+            <span class="sr-only"  >(current)</span>
+          </a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item active">
+            &nbsp;<i class="fas fa-sign-out-alt"style='font-size:37px; color:#f39c12'></i>
+          <a class="nav-link" href="loginpage.html">ออก <span class="sr-only"  >(current)</span>
+        
+          </a>
+        </li>
+       
+        </ul>
+
+    </div>
+  </nav>
+   <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+        <div class="chat_card">
+            <div class="d-flex justify-content-center">
+                <div class="brand_logo_container">
+                    <img src="pic/logo.gif" class="brand_logo" alt="Logo">
+                </div>
+            </div>
+            
+            <div class="container h-100">
+              <div class="d-flex justify-content-center h-100">
+                  
+                     
+                      
+                     
+                          <form class="form-container">
+                              <br><br> <br><br>
+                              <marquee><h1>ประกาศจากทางร้าน
+                        </h1></marquee>
+                            <label for="msg"><b>ข่าวสาร</b></label>
+                            <textarea placeholder="ข้อความต่างๆ.." name="msg" required></textarea>
+                        <center>
+                            <button type="button" class="btn cancel">กลับ</button> 
+                            <button type="submit" class="btn">ส่ง</button>
+                          </center>
+                          </form>
+                    
+                  
+                  
+              </div>
+          </div>
+          
+        
+        </div>
+    </div>
+</div>
+
+  
+
+  
+    
+    <script language="javascript">
+      function seach(){     
+          console.log("true");
+        window.location.href = ("resultseachpage.html" );
+    
+      }
+      </script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    </body>
+    
+    </html>
