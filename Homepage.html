@@ -7,8 +7,6 @@
   <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
     integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -26,7 +24,7 @@
     </a>
 
 
-    <input class="form-control mr-sm-3" type="text" placeholder="กรุณากรอกหมายเลขทะเบียนรถ">
+    <input class="form-control mr-sm-3"   id="myInput" type="text" placeholder="กรุณากรอกหมายเลขทะเบียนรถ">
     <button class="btn btn-outline-success my-2 my-sm-0" type="button" name="button" OnClick="seach();">ค้นหา</button>
 
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
@@ -58,14 +56,13 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div class="dropdown">
           <div class="nav-item active">
-            &nbsp;<div class="fas fa-sign-out-alt dropdown-toggle" data-toggle="dropdown" type="button"
+            &nbsp;<div class="fas fa-cogs dropdown-toggle" data-toggle="dropdown" type="button"
               style='font-size:37px; color:#f39c12'></div><br>
             <div class="dropdown-menu " >
-              <a class="dropdown-item" href="registpage.html">เพิ่มสมาชิก</a>
+              <a class="dropdown-item" href="adduserpage.html">เพิ่มสมาชิก</a>
                  <a class=" dropdown-item   " href="loginpage.html" >ออกจากระบบ</a>
               
             </div>
-
 
           </div>
         </div>
@@ -94,10 +91,9 @@
             <th>ระดับความสกปรก</th>
             <th>ขนาดของรถ</th>
             <th>สถานะของรถ</th>
-
-
-
-          </tr>
+          </tr> 
+         </thead>
+         <tbody id="myTable">
           <tr>
             <th>13/03/62</th>
             <th>ทจ865 </th>
@@ -148,11 +144,8 @@
             <th>ใหญ่</th>
             <th><input type="button" value="สภานะของรถ" name="status" onclick="change()"></th>
 
-
           </tr>
-
-
-        </thead>
+        </tbody>
 
       </table>
 
@@ -185,8 +178,18 @@
     });
   </script>
 
+<script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
 
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
 
 
 

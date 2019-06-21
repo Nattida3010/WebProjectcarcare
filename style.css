@@ -180,4 +180,6 @@ height: 50%;
 .dropdown-toggle{
 	margin-top: 10px;
 	background-color:  #c0392b;
+	border: 2px solid;
+	
 }
