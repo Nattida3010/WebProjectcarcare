@@ -4,7 +4,7 @@
 			margin: 0;
 			padding: 0;
 			height: 100%;
-            background: #60a3bc ;
+			background: -webkit-linear-gradient(left, #3931af, #00c6ff);
            font-family: 'Kanit', sans-serif;
 		}
 		.user_card {
@@ -12,7 +12,7 @@
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #f39c12;
+			background: -webkit-linear-gradient(left,  #c0392b,#f39c12);
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -26,7 +26,7 @@
 			width: 900px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #f39c12;
+			background: -webkit-linear-gradient(left,  #c0392b,#f39c12);
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -41,7 +41,7 @@
 			width: 170px;
 			top: -75px;
 			border-radius: 50%;
-			background: #c0392b ;
+			background: -webkit-linear-gradient(left,  #c0392b,#f39c12);
 			padding: 10px;
 			text-align: center;
 			
@@ -66,12 +66,12 @@
 		}
 		.login_btn {
 			width: 100%;
-			background: #c0392b ;
+			background: -webkit-linear-gradient(left, 	#009933 ,#009966);
 			color: white ;
 		}
 		.turnback_btn{
 			width: 50%;
-			background: green;
+			background: -webkit-linear-gradient(left, 	#FF3399 ,#FF3333);
 			color: white ;
 		}
 		.login_btn:focus {
@@ -116,7 +116,7 @@
 			color: aliceblue
 		}
 		.head{
-			background: #f39c12;
+			background: -webkit-linear-gradient(left,  #c0392b,#f39c12);
 			margin-top: 1%;		
 		}
 		.table{
@@ -128,6 +128,7 @@
 		.navbar{
 			height: 15%;
 			width: auto;
+			background: -webkit-linear-gradient(left, #f39c12 ,#c0392b);
 		}
 		h2{
 		
@@ -183,3 +184,4 @@ height: 50%;
 	border: 2px solid;
 	
 }
+
