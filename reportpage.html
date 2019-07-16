@@ -95,9 +95,9 @@
 
 <br>
 <div class="container" style="overflow-x:auto; text-align: center;">
-    <table border ="2"   width = "60%" height ="20%" bgcolor = "pink" class="table">
+    <table border ="2"   width = "60%" height ="20%" class="table">
       <thead>
-        <tr bgcolor = "pink">
+        <tr bgcolor = "gray">
           <th>วันเดือนปี</th>
           <th>เลขทะเบียนรถ</th>
           <th>ชื่อเจ้าของรถ</th>
@@ -122,7 +122,13 @@
             <th>ล้างรถ ขัดสี</th>
             <th>มาก</th>
             <th>เล็ก</th>
-            <th><input   type="button"  value="สภานะของรถ" name="status" onclick="change()"> </th>
+            <th><select id="select">
+              <option >สถานะของรถ</option>
+              <option >กำลังดำเนินงาน</option>
+              <option >รอการชำระ</option>
+              <option >ชำระแล้ว</option>
+              </select></th>
+  
            
   
           </tr>
@@ -135,8 +141,12 @@
             <th>ขัดสี</th>
             <th>น้อย</th>
             <th>ใหญ่</th>
-            <th><input  type="button"  value="สภานะของรถ" name="status" onclick="change()"></th>
-           
+            <th><select id="select">
+              <option >สถานะของรถ</option>
+              <option >กำลังดำเนินงาน</option>
+              <option >รอการชำระ</option>
+              <option >ชำระแล้ว</option>
+              </select></th>
   
           </tr>
           <tr>
@@ -148,7 +158,13 @@
             <th>ล้างรถ ขัดสี</th>
             <th>มาก</th>
             <th>เล็ก</th>
-            <th><input  type="button"  value="สภานะของรถ" name="status" onclick="change()"></th>
+            <th><select id="select">
+              <option >สถานะของรถ</option>
+              <option >กำลังดำเนินงาน</option>
+              <option >รอการชำระ</option>
+              <option >ชำระแล้ว</option>
+              </select></th>
+  
            
   
           </tr>
@@ -161,8 +177,12 @@
             <th>ขัดสี</th>
             <th>น้อย</th>
             <th>ใหญ่</th>
-            <th><input  type="button"  value="สภานะของรถ" name="status" onclick="change()"></th>
-           
+            <th><select id="select">
+              <option >สถานะของรถ</option>
+              <option >กำลังดำเนินงาน</option>
+              <option >รอการชำระ</option>
+              <option >ชำระแล้ว</option>
+              </select></th>
   
           </tr>
   
@@ -214,6 +234,19 @@
     });
   });
   </script>
+   <!-- <script>
+    $(document).ready(function() {
+    var current = $('#select').val();
+    if (current = 'red') {
+    $('#select').css('color','red');
+    } else if (current = 'green'){ 
+    $('#select').css('color','green');
+     }
+     var current = $('#select').val();      
+    
+        });
+   
+    </script>  -->
    
 </body>
 

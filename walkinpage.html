@@ -13,7 +13,7 @@
 
     <div class="container h-100">
         <div class="d-flex justify-content-center h-100">
-            <div class="regist_card">
+            <div class="walkin_card">
 
                 <div class="d-flex justify-content-center">
 
@@ -25,22 +25,23 @@
                 <div class="d-flex justify-content-center form_container">
                     <form>
                         <center>
-                            <h2>เพิ่มลูกค้า</h2>
+                            <h2>เพิ่มรายการ</h2>
                         </center>
 
+                        <form action="Homepage.html" method="post" name="form1">
 
                         <div class="input-group mb-2">
 
                             <div class="input-group-append">
                                 <span class="input-group-text"></span>
                             </div>
-                            <input type="text" name="" class="form-control input_user" value="" placeholder="วันเดือนปี">
+                            <input type="text" name="wdp" class="form-control input_user" value="" placeholder="วันเดือนปี">
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"></span>
                             </div>
-                            <input type="text" name="" class="form-control input_pass" value=""
+                            <input type="text" name="ncar" class="form-control input_pass" value=""
                                 placeholder="ทะเบียนรถ">
                         </div>
 
@@ -48,56 +49,74 @@
                             <div class="input-group-append">
                                 <span class="input-group-text"></span>
                             </div>
-                            <input type="text" name="" class="form-control input_user" value=""
+                            <input type="text" name="flname" class="form-control input_user" value=""
                                 placeholder="ชื่อ-นามสกุล">
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"></span>
                             </div>
-                            <input type="text" name="" class="form-control input_user" value=""
+                            <input type="text" name="tel" class="form-control input_user" value=""
                                 placeholder="เบอร์โทรศัพท์">
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"></span>
                             </div>
-                            <input type="text" name="" class="form-control input_user" value=""
+                            <input type="text" name="" class="form-control input_user" value="color"
                                 placeholder="ประเภท/สี">
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"></span>
                             </div>
-                            <input type="password" name="" class="form-control input_pass" value=""
-                                placeholder="กรอกรหัสผ่าน">
+                            <input type="text" name="list" class="form-control input_pass" value=""
+                                placeholder="รายการที่ลูกค้าใช้บริการ">
                         </div>
-                        <div class="input-group mb-2">
-                            <div class="input-group-append">
-                                <span class="input-group-text"></span>
-                            </div>
-                            <input type="password" name="" class="form-control input_pass" value=""
-                                placeholder="กรอกรหัสผ่านอีกครั้ง">
+                       <div class="form-group">
+                        <div class="maxl">
+                            <label class="radio inline">  ระดับความสกปรก
+                                <input type="radio" name="level1" value="more" checked>
+                                <span>  มาก</span> 
+                            </label>
+                            <label class="radio inline"> 
+                                <input type="radio" name="level2" value="bit">
+                                <span>น้อย </span> 
+                            </label>
                         </div>
-
-                    </form>
                 </div>
-                <div class="d-flex justify-content-center mt-3 login_container">
-                    <button type="button" name="button" class="btn login_btn" OnClick="Back();">สมัคร</button>
-                </div>
-                <div class="mt-2">
-                    <div class="d-flex justify-content-center links">
-                        <button type="button" name="button" class="btn turnback_btn" OnClick="Back();"
-                            class="ml-2">กลับ</button>
+                            <div class="form-group">
+                                <div class="maxl">
+                                    <label class="radio inline">  ขนาดของรถ
+                                        <input type="radio" name="type1" value="small" checked>
+                                        <span>  ใหญ่</span> 
+                                    </label>
+                                    <label class="radio inline"> 
+                                        <input type="radio" name="type2" value="big">
+                                        <span>เล็ก </span> 
+                                    </label>
+                                </div>
+                        </div>
+                        <div class="mt-2">
+                                <button type="button" name="button" class="btn add_btn" OnClick="add();">เพิ่มรายการ</button>
+                                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                <button type="button" name="button" class="btn back_btn" OnClick="Back();"
+                                >กลับ</button>
+                            </div></form>
+                           
                     </div>
                 </div>
+                    </form>
+                </div> 
+                
+                
             </div>
         </div>
     </div>
     <script language="javascript">
-            function Back(){     
+            function add(){     
                 console.log("true");
-			  window.location.href = ("loginpage.html");
+			  window.location.href = ("Homepage.html");
 
             }
             </script>

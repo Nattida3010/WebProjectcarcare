@@ -76,14 +76,17 @@
   <div class="head">
     <center>
       <h2>รายการให้บริการของรถในวันที่ </h2>
-      <div id="clockbox" style="text-align:center;color:white;font-weight:bold;font-size: 150%;"></div>
       
     </center>
+    
+      <div id="clockbox" style="text-align:center;color:white;font-weight:bold;font-size: 150%;"></div>
+      <button class="add" style='font-size:20px' OnClick="walkin();"> Walkin <i class='fas fa-plus'></i></button><br><br>
+    
 
     <div class="container" style="overflow-x:auto; text-align: center;">
-      <table border="2" width="60%" height="20%" bgcolor="pink" class="table">
+      <table border="2" width="60%" height="20%" bgcolor="white;" class="table">
         <thead>
-          <tr bgcolor="pink">
+          <tr bgcolor="gray">
             <th>วันเดือนปี</th>
             <th>เลขทะเบียนรถ</th>
             <th>ชื่อเจ้าของรถ</th>
@@ -93,6 +96,7 @@
             <th>ระดับความสกปรก</th>
             <th>ขนาดของรถ</th>
             <th>สถานะของรถ</th>
+            <th>การชำระเงิน</th>
           </tr> 
          </thead>
          <tbody id="myTable">
@@ -105,7 +109,13 @@
             <th>ล้างรถ ขัดสี</th>
             <th>มาก</th>
             <th>เล็ก</th>
-            <th><input type="button" value="สภานะของรถ" name="status" onclick="change()"> </th>
+            <th><select id="select">
+              <option >สถานะของรถ</option>
+              <option >กำลังดำเนินงาน</option>
+              <option >รอการชำระ</option>
+              <option >ชำระแล้ว</option>
+              </select></th>
+  
 
 
           </tr>
@@ -118,8 +128,13 @@
             <th>ขัดสี</th>
             <th>น้อย</th>
             <th>ใหญ่</th>
-            <th><input type="button" value="สภานะของรถ" name="status" onclick="change()"></th>
-
+            <th><select id="select">
+              <option >สถานะของรถ</option>
+              <option >กำลังดำเนินงาน</option>
+              <option >รอการชำระ</option>
+              <option >ชำระแล้ว</option>
+              </select></th>
+  
 
           </tr>
           <tr>
@@ -131,8 +146,13 @@
             <th>ล้างรถ ขัดสี</th>
             <th>มาก</th>
             <th>เล็ก</th>
-            <th><input type="button" value="สภานะของรถ" name="status" onclick="change()"></th>
-
+            <th><select id="select">
+              <option >สถานะของรถ</option>
+              <option >กำลังดำเนินงาน</option>
+              <option >รอการชำระ</option>
+              <option >ชำระแล้ว</option>
+              </select></th>
+  
 
           </tr>
           <tr>
@@ -144,9 +164,14 @@
             <th>ขัดสี</th>
             <th>น้อย</th>
             <th>ใหญ่</th>
-            <th><input type="button" value="สภานะของรถ" name="status" onclick="change()"></th>
-
-          </tr>
+            <th><select id="select">
+              <option >สถานะของรถ</option>
+              <option >กำลังดำเนินงาน</option>
+              <option >รอการชำระ</option>
+              <option >ชำระแล้ว</option>
+              </select></th>
+  
+          </tr>        
         </tbody>
 
       </table>
@@ -190,6 +215,13 @@
     });
   });
   </script>
+  <script language="javascript">
+    function walkin(){     
+        console.log("true");
+      window.location.href = ("walkinpage.html" );
+  
+    }
+    </script>
 
 <script>
 

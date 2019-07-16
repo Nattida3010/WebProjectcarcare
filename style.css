@@ -4,7 +4,7 @@
 			margin: 0;
 			padding: 0;
 			height: 100%;
-			background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+			background: -webkit-linear-gradient(left, #52E5E7 , #130CB7);
            font-family: 'Kanit', sans-serif;
 		}
 		.user_card {
@@ -26,7 +26,7 @@
 			width: 900px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: -webkit-linear-gradient(left,  #c0392b,#f39c12);
+			background: -webkit-linear-gradient(left, #52E5E7 , #130CB7);
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -58,20 +58,32 @@
 			width: 90px;
 			border-radius: 50%;
 			border: 2px solid yellow;
-
+			/* ใสาให้เคลื่อนไหว ค่อบลบ */
+			-webkit-animation: mover 2s infinite  alternate;
+			animation: mover 1s infinite  alternate;
+		   
 		}
+		@-webkit-keyframes mover {
+			0% { transform: translateY(0); }
+			100% { transform: translateY(-10px); }
+		}
+		@keyframes mover {
+			0% { transform: translateY(0); }
+			100% { transform: translateY(-10px); }
+		}
+				/* ใสาให้เคลื่อนไหว ค่อบลบ */										
 		.form_container {
 			margin-top: 100px;
 			
 		}
 		.login_btn {
-			width: 100%;
+			width: 62%;
 			background: -webkit-linear-gradient(left, 	#009933 ,#009966);
 			color: white ;
 		}
 		.turnback_btn{
 			width: 50%;
-			background: -webkit-linear-gradient(left, 	#FF3399 ,#FF3333);
+			background: -webkit-linear-gradient(left, 	rgb(145, 18, 18) ,#FF3333);
 			color: white ;
 		}
 		.login_btn:focus {
@@ -97,7 +109,24 @@
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #f39c12;
+			background: -webkit-linear-gradient(left,  #c0392b,#f39c12);
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+		.walkin_card {
+			height: 600px;
+			width: 400px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: -webkit-linear-gradient(left,  #c0392b,#f39c12);
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -116,7 +145,7 @@
 			color: aliceblue
 		}
 		.head{
-			background: -webkit-linear-gradient(left,  #c0392b,#f39c12);
+			background: -webkit-linear-gradient(left, #52E5E7 , #130CB7);
 			margin-top: 1%;		
 		}
 		.table{
@@ -175,7 +204,7 @@ height: 50%;
   opacity: 1;
 }
 .form-control{
-	width: 55%;
+
 	height: auto;
 }
 .dropdown-toggle{
@@ -184,4 +213,19 @@ height: 50%;
 	border: 2px solid;
 	
 }
-
+.add{
+	margin-left: 80%;
+	background: -webkit-linear-gradient(left, 	rgb(145, 18, 18) ,#FF3333);
+	color: white ;
+	
+}
+.add_btn {
+	width: auto;
+	background: -webkit-linear-gradient(left, 	#009933 ,#009966);
+	color: white ;
+}
+.back_btn{
+	width: auto;
+	background: -webkit-linear-gradient(left, 	rgb(145, 18, 18) ,#FF3333);
+	color: white ;
+}
