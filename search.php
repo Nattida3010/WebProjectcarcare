@@ -65,6 +65,8 @@
                  <a class=" dropdown-item   " href="loginpage.html" >ออกจากระบบ</a>
               
             </div>
+
+
           </div>
         </div>
 
@@ -74,13 +76,55 @@
 
     </div>
   </nav>
-      
   <div class="head">
     <center>
-      <h2>ผลการค้นหารายงาน </h2>
+      <h2>ผลการค้นหาหมายเลขทะเบียนรถ </h2>
     </center>
- 
-    <div class="container" style="overflow-x:auto; text-align: center;">
+    <?php
+include  'config.php';
+$name = $_POST['name'];
+echo '<center>';
+$sqlsech = "SELECT * FROM customer WHERE Car_num LIKE '%$name%' ";
+$resultsech = mysqli_query($connect,$sqlsech);
+echo'<div class="container" style="overflow-x:auto; text-align: center;"> ';
+echo'<table border="2"  bgcolor="white;" class="table">';
+echo '<tr><td>';
+echo "วันเดือนปี";
+echo '</td><td>';
+echo "เลขทะเบียนรถ";
+echo '</td><td>';
+echo "ชื่อเจ้าของรถ";
+echo '</td><td>';
+echo "เบอร์โทรศัพท์";
+echo '</td><td>';
+echo "ประเภท";
+echo '</td><td>';
+echo "สี";
+echo '</td><td>';
+echo '</td></tr>';
+while($sech= mysqli_fetch_array( $resultsech)){
+    echo '<tr>';
+    echo '</td><td>';
+echo '<center>'.$sech["ID"].'<br>';
+echo '</td><td>';
+echo $sech["Car_num"].'<br>';
+echo '</td><td>';
+echo $sech["Name"].'<br>';
+echo '</td><td>';
+echo $sech["Phone"].'<br>';
+echo '</td><td>';
+echo $sech["Type"].'<br>';
+echo '</td><td>';
+echo $sech["Color"].'<br>';
+echo '</td><td>';
+echo '</td></tr>';
+}
+echo '</table>';
+echo '</center>';
+
+
+?>
+    <!-- <div class="container" style="overflow-x:auto; text-align: center;">
         <table border ="2"   width = "60%" height ="20%" bgcolor = "pink" class="table">
           <thead>
             <tr bgcolor = "pink">
@@ -94,11 +138,12 @@
               <th>ขนาดของรถ</th>
               <th>สถานะของรถ</th>
              
+             
     
             </tr>
             <tr>
-              <th>14/06/62</th>
-              <th>หก111 </th>
+              <th>13/03/62</th>
+              <th>หก333 </th>
               <th>สมจิตร สมใจ</th>
               <th>0626960144</th>
               <th>เก๋ง/แดง</th>
@@ -110,8 +155,8 @@
     
             </tr>
             <tr>
-              <th>14/06/62</th>
-              <th> ปอ333</th>
+              <th>13/03/62</th>
+              <th> หก333</th>
               <th>สุข สบาย</th>
               <th>0626960144</th>
               <th>กะบะ/ดำ</th>
@@ -123,8 +168,8 @@
     
             </tr>
             <tr>
-              <th>14/06/62</th>
-              <th>กก332   </th>
+              <th>13/03/62</th>
+              <th>หก333   </th>
               <th>สมจิตร สมใจ</th>
               <th>0626960144</th>
               <th>เก๋ง/แดง</th>
@@ -136,7 +181,7 @@
     
             </tr>
             <tr>
-              <th>14/06/62</th>
+              <th>13/03/62</th>
               <th> หก333 </th>
               <th>สุข สบาย</th>
               <th>0626960144</th>
@@ -157,7 +202,7 @@
     
        
       </div>
-</div>
+</div> -->
 <script language="javascript">
     function seach(){     
         console.log("true");
@@ -170,7 +215,7 @@
         $(".dropdown-toggle").dropdown();
       });
     </script>
-  
+   
 </body>
 
 </html>

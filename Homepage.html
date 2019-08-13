@@ -12,7 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
 <body>
@@ -72,6 +72,7 @@
 
     </div>
   </nav>
+  
   <div class="head">
     <center>
       <h2>รายการให้บริการของรถในวันที่ </h2>
@@ -80,9 +81,9 @@
     
       <div id="clockbox" style="text-align:center;color:white;font-weight:bold;font-size: 150%;"></div>
       <button class="add" style='font-size:20px' OnClick="walkin();"> Walkin <i class='fas fa-plus'></i></button><br><br>
-    
 
-    <div class="container" style="overflow-x:auto; text-align: center;">
+
+ <div class="container" style="overflow-x:auto; text-align: center;"> 
       <table border="2" width="60%" height="20%" bgcolor="white;" class="table">
         <thead>
           <tr bgcolor="gray">
@@ -97,7 +98,10 @@
             <th>สถานะของรถ</th>
             <th>การชำระเงิน</th>
           </tr> 
-         </thead>
+         </thead> 
+         
+          
+
          <tbody id="myTable">
           <tr>
             <th>13/03/62</th>
@@ -179,7 +183,7 @@
 
     </div>
   </div>
-  <script language="javascript">
+    <script language="javascript">
     function seach() {
       console.log("true");
       window.location.href = ("resultseachpage.html");

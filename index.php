@@ -31,7 +31,7 @@
 <center><input type="submit" name="login-submit" id="login-submit"  value="เข้าสู่ระบบ"><center>
 </form>
 <br>
-<form  action="signup.php" method="post" name="regisform">
+<form  action="siguppage.php" method="post" name="regisform">
 <center><input type="submit" name="regismenber"   value="ลงทะเบียน"><center>
 <br>
 </form>
