@@ -109,7 +109,7 @@ echo '<center>'.$sech["ID"].'<br>';
 echo '</td><td>';
 echo $sech["Car_num"].'<br>';
 echo '</td><td>';
-echo $sech["Name"].'<br>';
+echo $sech["FName"].'    '.$sech["LName"].'<br>';
 echo '</td><td>';
 echo $sech["Phone"].'<br>';
 echo '</td><td>';

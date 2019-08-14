@@ -134,7 +134,7 @@ echo '<center>'.$user["ID"].'<br>';
 echo '</td><td>';
 echo $user["Car_num"].'<br>';
 echo '</td><td>';
-echo $user["Name"].'<br>';
+echo $user["FName"].'    '.$user["LName"].'<br>';
 echo '</td><td>';
 echo $user["Phone"].'<br>';
 echo '</td><td>';
@@ -149,88 +149,7 @@ echo '</center>';
 
 
 ?>
-<!-- 
-         <tbody id="myTable">
-          <tr>
-            <th>13/03/62</th>
-            <th>ทจ865 </th>
-            <th>สมจิตร สมใจ</th>
-            <th>0626960144</th>
-            <th>เก๋ง/แดง</th>
-            <th>ล้างรถ ขัดสี</th>
-            <th>มาก</th>
-            <th>เล็ก</th>
-            <th><select id="select">
-              <option >สถานะของรถ</option>
-              <option >กำลังดำเนินงาน</option>
-              <option >รอการชำระ</option>
-              <option >ชำระแล้ว</option>
-              </select></th>
-  
 
-
-          </tr>
-          <tr>
-            <th>13/03/62</th>
-            <th> กจ123 </th>
-            <th>สุข สบาย</th>
-            <th>0626960144</th>
-            <th>กะบะ/ดำ</th>
-            <th>ขัดสี</th>
-            <th>น้อย</th>
-            <th>ใหญ่</th>
-            <th><select id="select">
-              <option >สถานะของรถ</option>
-              <option >กำลังดำเนินงาน</option>
-              <option >รอการชำระ</option>
-              <option >ชำระแล้ว</option>
-              </select></th>
-  
-
-          </tr>
-          <tr>
-            <th>13/03/62</th>
-            <th>ปจ235 </th>
-            <th>สมจิตร สมใจ</th>
-            <th>0626960144</th>
-            <th>เก๋ง/แดง</th>
-            <th>ล้างรถ ขัดสี</th>
-            <th>มาก</th>
-            <th>เล็ก</th>
-            <th><select id="select">
-              <option >สถานะของรถ</option>
-              <option >กำลังดำเนินงาน</option>
-              <option >รอการชำระ</option>
-              <option >ชำระแล้ว</option>
-              </select></th>
-  
-
-          </tr>
-          <tr>
-            <th>13/03/62</th>
-            <th> หก333 </th>
-            <th>สุข สบาย</th>
-            <th>0626960144</th>
-            <th>กะบะ/ดำ</th>
-            <th>ขัดสี</th>
-            <th>น้อย</th>
-            <th>ใหญ่</th>
-            <th><select id="select">
-              <option >สถานะของรถ</option>
-              <option >กำลังดำเนินงาน</option>
-              <option >รอการชำระ</option>
-              <option >ชำระแล้ว</option>
-              </select></th>
-  
-          </tr>        
-        </tbody> -->
-
-      <!-- </table> -->
-
-
-<!-- 
-    </div> -->
-  <!-- </div> -->
     <script language="javascript">
     function seach() {
       console.log("true");
@@ -269,7 +188,7 @@ echo '</center>';
   <script language="javascript">
     function walkin(){     
         console.log("true");
-      window.location.href = ("walkinpage.html" );
+      window.location.href = ("selectpage.php" );
   
     }
     </script>
