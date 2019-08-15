@@ -23,13 +23,16 @@
    echo '<input class="btn btn-outline-success my-2 my-sm-0" name="submit" type="submit"  value = "ค้นหา">';
    echo '</form>';
 ?>
+
                 <div class="mt-2">
                     <div class="d-flex justify-content-center links">
-                        <button type="button" name="button" class="btn turnback_btn" OnClick="Back();"
-                            class="ml-2">กลับ</button>
+                      <a name="" id="" class="btn turnback_btn" href="#" role="button" OnClick="Back();">กลับ</a> 
+                       <!-- <button type="button" name="button" class="btn turnback_btn" OnClick="Back();"
+                           >กลับ</button> -->
                     </div>
             
     </div>
+</div>
 </form>
     <script language="javascript">
             function Back(){     

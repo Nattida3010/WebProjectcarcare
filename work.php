@@ -20,10 +20,10 @@ $level = $_POST['level'];
 $size = $_POST['size'];
 $car_num = $_SESSION['car_selected'];     
 echo date("Y-m-d H:i:s");
-
+$datetims = date("Y-m-d H:i:s");
 include  'config.php';
 $sql = 'INSERT INTO work
-values("'.$car_num.'",'.$wash_engin.','.$spray_under.','.$clean_dust.','.$wash_asphalt.','.$chang_fuel.','.$level.','.$size.',0,0,'.date("Y-d-m H:i:s").')';
+values("'.$car_num.'",'.$wash_engin.','.$spray_under.','.$clean_dust.','.$wash_asphalt.','.$chang_fuel.','.$level.','.$size.',0,0,"'.$datetims.'")';
 $result = mysqli_query($connect,$sql);
 //$numrows = mysqli_num_rows($result);
 // $objResult = mysqli_fetch_array($result,MYSQLI_ASSOC);
