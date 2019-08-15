@@ -19,7 +19,6 @@ $chang_fuel = 1;
 $level = $_POST['level'];
 $size = $_POST['size'];
 $car_num = $_SESSION['car_selected'];     
-echo date("Y-m-d H:i:s");
 $datetims = date("Y-m-d H:i:s");
 include  'config.php';
 $sql = 'INSERT INTO work
@@ -30,7 +29,8 @@ $result = mysqli_query($connect,$sql);
 if(! $result){
     echo mysqli_error($connect);
 }else{
-    echo "success";
+    echo "<script>window.location = 'Home.php'</script>";
+    
   
 }
            

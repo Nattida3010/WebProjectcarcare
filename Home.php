@@ -86,35 +86,22 @@
       <div id="clockbox" style="text-align:center;color:white;font-weight:bold;font-size: 150%;"></div>
       <button class="add" style='font-size:20px' OnClick="walkin();"> Walkin <i class='fas fa-plus'></i></button><br><br>
       
-      <!-- แสดงตารางรวม -->
 
- <!-- <div class="container" style="overflow-x:auto; text-align: center;"> 
-      <table border="2" width="60%" height="20%" bgcolor="white;" class="table"> -->
-        <!-- <thead>
-          <tr bgcolor="gray">
-            <th>วันเดือนปี</th>
-            <th>เลขทะเบียนรถ</th>
-            <th>ชื่อเจ้าของรถ</th>
-            <th>เบอร์โทรศัพท์</th>
-            <th>ประเภท/สี</th>
-            <th>รายการที่ลูกค้าใช้บริการ</th>
-            <th>ระดับความสกปรก</th>
-            <th>ขนาดของรถ</th>
-            <th>สถานะของรถ</th>
-            <th>การชำระเงิน</th>
-          </tr> 
-         </thead>  -->
  <?php
 include  'config.php';
-$sqluser = 'SELECT * FROM customer';
-$queryuser = mysqli_query($connect,$sqluser);
+// // $sqluser = 'SELECT * FROM customer';
+// $queryuser = mysqli_query($connect,$sqluser);
 // $sqlwork = 'SELECT * FROM work';
 // $querywork = mysqli_query($connect,$sqlwork);
+$sqlwork = 'SELECT customer.Car_num,customer.FName,customer.LName,customer.Phone,customer.Type,customer.Color,work.wash_engin,work.spray_under,work.clean_dust,work.wash_asphalt,work.chang_fuel,work.level,work.size,work.status,work.payment,work.time
+from customer 
+inner join work on customer.Car_num=work.Car_num';
+$querywork = mysqli_query($connect,$sqlwork);
 
 echo'<div class="container" style="overflow-x:auto; text-align: center;"> ';
 echo'<table border="2"  bgcolor="white;" class="table">';
 echo '<tr  bgcolor = "gray"><td>';
-echo "วันเดือนปี";
+echo "เวลา";
 echo '</td><td>';
 echo "เลขทะเบียนรถ";
 echo '</td><td>';
@@ -122,28 +109,75 @@ echo "ชื่อเจ้าของรถ";
 echo '</td><td>';
 echo "เบอร์โทรศัพท์";
 echo '</td><td>';
-echo "ประเภท";
+echo "ประเภท/สี";
 echo '</td><td>';
-echo "สี";
+echo "รายการที่ลูกค้าใช้บริการ";
 echo '</td><td>';
+echo "ระดับความสกปรก";
+echo '</td><td>';
+echo "ขนาดของรถ";
+echo '</td><td>';
+echo "สถานะของรถ";
+echo '</td><td>';
+echo "ชำระเงิน";
 echo '</td></tr>';
-while($user= mysqli_fetch_array( $queryuser, MYSQLI_ASSOC)){
-    echo '<tr>';
-    echo '</td><td>';
-echo '<center>'.$user["ID"].'<br>';
-echo '</td><td>';
-echo $user["Car_num"].'<br>';
-echo '</td><td>';
-echo $user["FName"].'    '.$user["LName"].'<br>';
-echo '</td><td>';
-echo $user["Phone"].'<br>';
-echo '</td><td>';
-echo $user["Type"].'<br>';
-echo '</td><td>';
-echo $user["Color"].'<br>';
-echo '</td><td>';
-echo '</td></tr>';
+while($user= mysqli_fetch_array( $querywork, MYSQLI_ASSOC)){
+  $works = '';
+  if($user['wash_engin']=='1')
+  $works .= 'ล้างห้องเครื่อง ';
+  if($user['spray_under']=='1')
+  $works .= 'ล้างอัดฉีดช่วงล้าง ';
+  if($user['clean_dust']=='1')
+  $works .= 'ล้างสีดูดฝุ่น ';
+  if($user['wash_asphalt']=='1')
+  $works .= 'ล้างยางมะตอย ';
+  if($user['chang_fuel']=='1')
+  $works .= 'ถ่ายน้ำเครื่อง ';
+  if($user['level']=='1')
+  $level = 'น้อย';
+  else if($user['level']=='2')
+  $level = 'มาก';
+  if($user['size']=='1')
+  $size = 'เล็ก';
+  else if($user['size']=='2')
+  $size = 'ใหญ่';
+  echo "<tr>";
+  echo '<td>'.$user["time"].'</td>';
+  echo '<td>'.$user["Car_num"].'</td>';
+  echo '<td>'.$user['FName'].' '.$user['LName'].'</td>';
+  echo '<td>'.$user['Phone'].'</td>';
+  echo '<td>'.$user['Type'].'/'.$user['Color'].'</td>';
+  echo '<td>'.$works.'</td>';
+  echo '<td>'.$level.'</td>';
+  echo '<td>'.$size.'</td>';
+  echo '<td><select id="select">
+                  <option >กำลังดำเนินงาน</option>
+              <option >เรียบร้อยแล้ว</option>
+             </select> </td>'; 
+  echo '<td><select id="select">
+              <option >รอการชำระเงิน</option>
+              <option >เรียบร้อยแล้ว</option>
+             </select> </td>'; 
+             
+  echo "</tr>";
 }
+// while($user= mysqli_fetch_array( $querywork, MYSQLI_ASSOC)){
+//     echo '<tr>';
+//     echo '</td><td>';
+// echo '<center>'.$user["time"].'<br>';
+// echo '</td><td>';
+// echo $user["customer.Car_num"].'<br>';
+// echo '</td><td>';
+// echo $user["FName"].'    '.$user["LName"].'<br>';
+// echo '</td><td>';
+// echo $user["Phone"].'<br>';
+// echo '</td><td>';
+// echo $user["Type"].'<br>';
+// echo '</td><td>';
+// echo $user["Color"].'<br>';
+// echo '</td><td>';
+// echo '</td></tr>';
+// }
 echo '</table>';
 echo '</center>';
 
